@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/room/:roomid", (req, res) => {
-  if (room[req.params.roomid]?.length >= 2) {
+  if (room[req.params.roomid]?.length >= 10) {
     res.send("<h1>Maaf Room Sudah Penuh</h1>");
   } else {
     res.sendFile(path.resolve("./views/index.html"));
